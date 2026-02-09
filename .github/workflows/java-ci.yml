@@ -1,6 +1,6 @@
 name: Java CI Pipeline
 
-on:                                  #This defines when the workflow should run.
+on:      #tigger section (When does the pipeline run?)   #This defines when the workflow should run.
   push:
     branches: [ "main" ]
   pull_request:
@@ -8,10 +8,10 @@ on:                                  #This defines when the workflow should run.
 
 jobs:
   build:    #Defines a job named build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #specify the machine where job will run
 
     steps:            #Each step performs one action in the pipeline.
-    - name: Checkout code
+    - name: Checkout code #Downloads your repository code into the runner
       uses: actions/checkout@v4
 
     - name: Set up JDK 11   #Installs Java JDK 11 on the runner
